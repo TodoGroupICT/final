@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List Dashboard</title>
+  <link rel="stylesheet" href="./dashboard.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  
+  <div class="main">
+    
+    <div class="top">
+      <!-- Logo -->
+      <div class="logo">To-Do List</div>
+      
+      <div class="nav">
+        <!-- Navigation Links -->
+        <a class="link" href="./index.html">Home</a>
+        <a class="link" href="./about.html">About Us</a>
+        <a class="link" href="./privacypolicy.html">Privacy Policy</a>
+        <a class="link" href="./contactus.html">Contact-Us</a>
+      </div>
+    </div>
+    
+    <div class="second">
+      
+    
+      <h1 class="head">Todo List Dashboard</h1>
+      <div class="logout">
+        <!-- Logout Button -->
+        <button class="lgout"><a href="./index.html">Logout</a></button>
+      </div>
+      
+      <div class="add-task">
+        <!-- Task Form -->
+        <form id="task-form">
+          <label for="task">Add Task:</label>
+          <input type="text" id="task" name="task" required>
+          <label for="date">Due Date:</label>
+          <input type="date" id="date" name="date" required>
+          <label for="note">Note:</label>
+          <textarea id="note" name="note"></textarea>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+      
+      <div class="cards">
+        <!-- Task List -->
+        <div class="task-list">
+          <h2 class="taskList">Task List</h2>
+          <div id="task-cards">
+            <!-- Task cards will be dynamically generated here -->
+          </div>
+        </div>
+        
+        <!-- Done Tasks List -->
+        <div class="done-tasks">
+          <h2 class="doneTask">Done Tasks</h2>
+          <div id="done-cards">
+            <!-- Done task cards will be dynamically generated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="footer">© 2021 ICT group 06 | All Rights Reserved</div>
+    
+    <!-- External JavaScript -->
+    <script src="./script.js"></script>
+</body>
+</html>

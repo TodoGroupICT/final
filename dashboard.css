@@ -1,0 +1,318 @@
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Top navigation bar */
+.top {
+  width: 100vw;
+  height: 70px;
+  background-color: #42c2ff;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+}
+/* Body of page */
+.second {
+  background-image: url("./bg1.gif");
+  height: 100%;
+}
+/* Logo */
+.logo {
+  color: #092f87;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  margin-left: 75px;
+  font-family: "Caveat", cursive;
+}
+
+/* Navigation links */
+.nav {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 100px;
+}
+
+/* Individual navigation link */
+.link {
+  text-decoration: none;
+  color: #000000;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+/* Hover effect on navigation link */
+.link:hover {
+  color: #effffd;
+}
+
+/* Resetting styles for all elements */
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading styles */
+.head {
+  font-family: "Play", sans-serif;
+  font-size: 45px;
+  padding-top: 100px;
+  padding-bottom: 15px;
+}
+
+h1,h2 {
+  text-align: center;
+}
+
+/* Add task section */
+.add-task {
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Task list section */
+.taskList {
+  text-align: center;
+  padding-top: 25px;
+  padding-left: 5%;
+  padding-bottom: 25px;
+  width: 100%;
+  border: solid rgb(13, 0, 127);
+  border-radius: 10px;
+  font-family: "Play", sans-serif;
+}
+
+/* Done task section */
+.doneTask {
+  text-align: center;
+  padding-top: 25px;
+  padding-left: 5%;
+  padding-bottom: 25px;
+  border: solid rgb(13, 0, 127);
+  border-radius: 10px;
+  font-family: "Play", sans-serif;
+}
+
+/* Task cards section */
+.cards {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 100px;
+}
+
+/* Task list and done tasks sections */
+.task-list,.done-tasks {
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 2%;
+  background-color: #42c3ffce;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Task card */
+.card {
+  background-color: #ddf7fc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  width: 400px;
+  padding: 10px;
+  margin: 10px 15%;
+}
+
+/* Task card button */
+.card button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+/* Hover effect on task card button */
+.card button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px #ccc;
+}
+
+/* Form input styles */
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ffffff;
+  background-color: #e7e7e787;
+  border-radius: 3px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form styles */
+form {
+  background-color: rgba(62, 104, 255, 0.762);
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Form heading */
+form h2 {
+  color: #d9b0b0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form label */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Form input and textarea */
+form input,form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Form button */
+form button {
+  background-color: #1c6cf6;
+  color: #fff;
+  border: solid black 2px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Hover effect on form button */
+form button:hover {
+  background-color: #3762b0;
+}
+
+/* Task card heading */
+.card h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+  font-family: "Play", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Task card paragraph */
+.card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Task card button */
+.card button {
+  margin-right: 20px;
+  padding: 5px 10px;
+  width: 80px;
+}
+
+/* Done task cards */
+.done-cards .card {
+  background-color: #e8e8e8;
+}
+
+/* Done task card heading */
+.done-cards .card h3 {
+  color: #999;
+}
+
+/* Done task card paragraph */
+.done-cards .card p {
+  color: #aaa;
+}
+
+/* Footer section */
+.footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  background-color: #42c2ff;
+  text-align: center;
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  padding-top: 12px;
+}
+
+/* Logout button */
+.logout {
+  margin-left: 80%;
+}
+
+/* Logout button styles */
+.lgout {
+  width: 150px;
+  height: 50px;
+  font-size: 27px;
+  border-radius: 25px;
+  background-color: #032292;
+  
+}
+
+/* Hover effect on logout button */
+.lgout:hover {
+  background-color: #42c2ff;
+  
+}
+
+/* Logout button styles */
+.lgout a{
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+ .lgout a:hover{
+color: #000000;
+}

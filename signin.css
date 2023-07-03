@@ -1,0 +1,314 @@
+/* Resetting padding and margin for all elements */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for the body section */
+.body {
+  width: 100vw;
+  height: 80vh;
+  background-image: url("./bg1.gif");
+}
+
+/* Styling for the top section */
+.top {
+  width: 100vw;
+  height: 70px;
+  background-color: #42c2ff;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling for the logo within the top section */
+.logo {
+  color: #092f87;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  margin-left: 75px;
+  font-family: "Caveat", cursive;
+}
+
+/* Styling for the navigation section within the top section */
+.nav {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 100px;
+}
+
+/* Styling for the links within the navigation section */
+
+.link {
+  text-decoration: none;
+  color: #000000;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+/* Hover effect for the links within the navigation section */
+
+.link:hover {
+  color: #effffd;
+}
+
+/* Styling for the login box section */
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  margin: 20px auto;
+  transform: translate(-50%, -55%);
+  background: #092f87;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px #092f87;
+  border-radius: 10px;
+}
+
+/* Styling for the first paragraph within the login box section */
+
+.login-box p:first-child {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #42c2ff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Styling for the user-box class within the login box section */
+
+.login-box .user-box {
+  position: relative;
+}
+
+/* Styling for the input field within the user-box class */
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #42c2ff;
+  outline: none;
+  background: transparent;
+}
+
+/* Styling for the label within the user-box class */
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+/* Styling for the label when the input field is focused or has a value */
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* Styling for the link within the login box form */
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 1px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #42c2ff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 7px;
+}
+
+/* Styling for the button within the login box form */
+
+.login-box form a button {
+  background: none;
+  height: 35px;
+  width: 100px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #092f87;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+/* Hover effect for the link within the login box form */
+
+.login-box a:hover {
+  background: #42c2ff;
+  color: #272727;
+  border-radius: 5px;
+}
+
+/* Hover effect for the button within the login box form */
+
+.login-box form a button:hover {
+  background: #092f87;
+  color: #42c2ff;
+  border-radius: 5px;
+}
+
+/* Styling for the spans within the link */
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+/* Styling for the first span within the link */
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #eae20a);
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+/* Keyframes animation for the first span */
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+/* Styling for the second span within the link */
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #eae20a);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: 0.375s;
+}
+
+/* Keyframes animation for the second span */
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+/* Styling for the third span within the link */
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #eae20a);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: 0.75s;
+}
+
+/* Keyframes animation for the third span */
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+/* Styling for the fourth span within the link */
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #eae20a);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s;
+}
+
+/* Keyframes animation for the fourth span */
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* Styling for the last paragraph within the login box section */
+
+.login-box p:last-child {
+  color: #aaa;
+  font-size: 17px;
+}
+
+/* Styling for the link with class "a2" within the login box section */
+
+.login-box a.a2 {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hover effect for the link with class "a2" within the login box section */
+
+.login-box a.a2:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
+}
+
+/* Styling for the footer section */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  background-color: #42c2ff;
+  text-align: center;
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  padding-top: 12px;
+}

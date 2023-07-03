@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Us</title>
+    <form class="gform pure-form pure-form-stacked" method="POST" data-email="todolistg6official@gmail.com"
+  action="https://script.google.com/macros/s/AKfycbwYk6S_W3VkesRlSSsXzvdMWYAoG9Z1YwVAEpyl-EMb2FSgKaURWTiY4mst7Hqc0KlSjg/exec">
+    <link rel="stylesheet" href="./contactus.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="./contactus.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+    <div class="main">
+        <div class="top">
+          <div class="logo">To-Do List</div>
+          <div class="nav">
+            <a class="link" href="./index.html">Home</a>
+            <a class="link" href="./about.html">About Us</a>
+            <a class="link" href="./privacypolicy.html">Privacy Policy</a>
+            <a class="link" href="./contactus.html">Contact-Us</a>
+          </div>
+        </div>
+        <div class="body">
+          <form>
+            <div class="contact-form">
+              
+                <span class="heading">Contact Us</span>
+                <br method="post">
+                  <label for="name">Name:</label><br><br>
+                  <input type="text" id="name" required=""onfocus= "clearInput(this)"><br>
+                  <label for="email">Email:</label><br><br>
+                  <input type="email" id="email" name="email" required=""><br>
+                  <label for="message">Message:</label><br><br>
+                  <textarea id="message" name="message" required=""></textarea>
+                  <button type="submit"id="btn" onclick="fireSweetAlert()">Send</button></div>
+                  
+              </div>
+            
+          </form>
+            </div>
+            
+          </form>
+          <div class="footer">© 2021 ICT group 06 | All Rights Reserved</div>
+          <script data-cfasync="false" type="text/javascript">
+              
+              
+            // Function to display a success message using SweetAlert2
+            function fireSweetAlert() {
+              let name = document.getElementById("name").value;
+              let email = document.getElementById("email").value;
+              let message = document.getElementById("message").value;
+
+              if (name !== "" && email !== "" && message !== "") {
+                Swal.fire({
+                  title: 'Good job!',
+                  text: 'You sent a message as an Email',
+                  icon: 'success',
+                  onClose: function() {
+                    // Reload the page
+                  location.reload();
+                 }
+              });
+            }       
+          }
+          // Function to validate email format
+          (function() {
+           function validEmail(email) {
+             var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+             return re.test(email);
+           }
+          // Function to validate if the form is filled by a human (honeypot technique)
+           function validateHuman(honeypot) {
+             if (honeypot) {
+               console.log("Robot Detected!");
+               return true;
+             } else {
+               console.log("Welcome Human!");
+             }
+           }
+           // Function to retrieve form data
+           function getFormData(form) {
+             var elements = form.elements;
+          
+             var fields = Object.keys(elements).filter(function(k) {
+                   return (elements[k].name !== "honeypot");
+             }).map(function(k) {
+               if(elements[k].name !== undefined) {
+                 return elements[k].name;
+               }else if(elements[k].length > 0){
+                 return elements[k].item(0).name;
+               }
+             }).filter(function(item, pos, self) {
+               return self.indexOf(item) == pos && item;
+             });
+          
+             var formData = {};
+             fields.forEach(function(name){
+               var element = elements[name];
+               formData[name] = element.value;
+               if (element.length) {
+                 var data = [];
+                 for (var i = 0; i < element.length; i++) {
+                   var item = element.item(i);
+                   if (item.checked || item.selected) {
+                     data.push(item.value);
+                   }
+                 }
+                 formData[name] = data.join(', ');
+               }
+             });
+          
+             // add form-specific values into the data
+             formData.formDataNameOrder = JSON.stringify(fields);
+             formData.formGoogleSheetName = form.dataset.sheet || "todolistsheet"; // default sheet name
+             formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+          
+             console.log(formData);
+             return formData;
+           }
+          // Function to handle form submission
+           function handleFormSubmit(event) {  
+             event.preventDefault();           
+             var form = event.target;
+             var data = getFormData(form);         
+             if( data.email && !validEmail(data.email) ) {   
+               var invalidEmail = form.querySelector(".email-invalid");
+               if (invalidEmail) {
+                 invalidEmail.style.display = "block";
+                 return false;
+               }
+             } else {
+               disableAllButtons(form);
+               var url = form.action;
+               var xhr = new XMLHttpRequest();
+               xhr.open('POST', url);
+               xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+               xhr.onreadystatechange = function() {
+                   console.log(xhr.status, xhr.statusText);
+                   console.log(xhr.responseText);
+                   var formElements = form.querySelector(".form-elements")
+                   if (formElements) {
+                     formElements.style.display = "none"; // hide form
+                   }
+                   var thankYouMessage = form.querySelector(".thankyou_message");
+                   if (thankYouMessage) {
+                     thankYouMessage.style.display = "block";
+                   }
+                   return;
+               };
+               // Prepare the data to be sent as URL-encoded key-value pairs
+               var encoded = Object.keys(data).map(function(k) {
+                   return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+               }).join('&');
+               xhr.send(encoded);
+             }
+           }
+           // Function to handle form submission on page load
+           function loaded() {
+             console.log("Contact form submission handler loaded successfully.");
+             var forms = document.querySelectorAll("form.gform");
+             for (var i = 0; i < forms.length; i++) {
+               forms[i].addEventListener("submit", handleFormSubmit, false);
+             }
+           };
+           // Load the form submission handler on page load
+           document.addEventListener("DOMContentLoaded", loaded, false);
+          
+             // Function to disable all form buttons
+           function disableAllButtons(form) {
+             var buttons = form.querySelectorAll("button");
+             for (var i = 0; i < buttons.length; i++) {
+               buttons[i].disabled = true;
+             }
+           }
+          })();
+          
+          
+           </script>
+
+</body>
+
+</html>

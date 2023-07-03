@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- External CSS file for styling the login page -->
+    <link rel="stylesheet" href="./signin.css">
+    <!-- Fonts from Google Fonts API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font 'Caveat' styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font 'Yanone Kaffeesatz' styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font 'Play' styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font 'Changa' styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External JavaScript file for login functionality -->
+    <script src="./login.js"></script>
+</head>
+<body>
+   <div class="main">
+    <div class="top">
+        <div class="logo">To-Do List</div>
+        <div class="nav">
+          <!-- Navigation links -->
+          <a class="link" href="./index.html">Home</a>
+          <a class="link" href="./about.html">About Us</a>
+          <a class="link" href="./privacypolicy.html">Privacy Policy</a>
+          <a class="link" href="contactus.html">Contact-Us</a>
+        </div>
+   </div>
+   <div class="body">
+    <div class="login-box">
+        <p>Sign In</p>
+        <form>
+          <div class="user-box">
+            <!-- Email input field -->
+            <input required="" name="" id="email" type="text">
+            <label>Email</label>
+          </div>
+          <div class="user-box">
+            <!-- Password input field -->
+            <input required="" name="" id="password" type="password">
+            <label>Password</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- Login button -->
+            <button id="signIn" value="Sign In" onclick="login()" type="submit">Login</button>
+          </a>
+        </form>
+        <p>Don't have an account? <a href="./signup.html" class="a2">Register!</a></p>
+      </div>
+      
+   </div>
+   <!-- Footer section -->
+   <div class="footer">© 2021 ICT group 06 | All Rights Reserved</div>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+/* Reset default styles for all elements */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles for the second section */
+.second {
+  height: 80vh;
+  background-image: url("./bg1.gif");
+ 
+}
+
+/* Styles for buttons */
+.btn {
+  text-decoration: none;
+  color: #effffd;
+}
+
+/* Styles for button when hovered */
+.btn:hover {
+  color: #000000;
+}
+
+/* Styles for the top section */
+.top {
+  width: 100vw;
+  height: 70px;
+  background-color: #42c2ff;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styles for the logo */
+.logo {
+  color: #092f87;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  margin-left: 75px;
+  font-family: "Caveat", cursive;
+}
+
+/* Styles for navigation links */
+.nav {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 100px;
+}
+
+/* Styles for navigation links */
+.link {
+  text-decoration: none;
+  color: #000000;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+/* Styles for navigation links when hovered */
+.link:hover {
+  color: #effffd;
+}
+
+/* Styles for the introduction section */
+.intro {
+  background-color: #ffffff;
+  width: 50%;
+  font-size: 45px;
+  margin-top: 10%;
+  margin-left: 5%;
+  font-family: "Play", sans-serif;
+  color: #062751;
+  height: 250px;
+}
+
+/* Styles for the photo */
+.photo {
+  margin-top: 5%;
+  margin-right: 6%;
+  border-radius: 50px;
+}
+
+/* Styles for the buttons */
+button {
+  font-family: "Play", sans-serif;
+  font-size: 22px;
+  padding: 1em 2.7em;
+  font-weight: 500;
+  background: #092f87;
+  color: white;
+  border: solid #ffbc48;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2.6em;
+}
+
+/* Styles for the transition effect on buttons */
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+/* Styles for the button label */
+.label {
+  position: relative;
+  top: -1px;
+}
+
+/* Styles for the transition effect on buttons */
+.transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: #42c2ff;
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Styles for the transition effect on buttons when hovered */
+button:hover .transition {
+  width: 14em;
+  height: 14em;
+}
+
+/* Styles for buttons when hovered */
+button:hover {
+  color: #000000;
+}
+
+/* Styles for buttons when pressed */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Styles for the buttons section */
+.buttons {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 55%;
+  margin-right: 5px;
+}
+
+/* Styles for the first subsection */
+.sub1 {
+  display: flex;
+  justify-content: space-around;
+  height: 71%;
+}
+
+/* Styles for the second subsection */
+.sub2 {
+  width: 40%;
+  margin-left: 12%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Styles for the welcome text */
+.wel {
+  font-weight: bold;
+  font-size: 45px;
+  color: #092f87;
+}
+.wel2{
+  font-size: 37px;
+}
+
+/* Styles for the footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  background-color: #42c2ff;
+  text-align: center;
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  padding-top: 12px;
+}

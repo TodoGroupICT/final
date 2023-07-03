@@ -1,0 +1,193 @@
+/* Resetting default padding and margin values for all elements */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling the body element */
+.body {
+  height: 90vh;
+  background-image: url("./bg1.gif");
+  background-repeat: no-repeat;
+        background-size: cover;
+}
+
+/* Styling the top navigation bar */
+.top {
+  width: 100vw;
+  height: 70px;
+  background-color: #42c2ff;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling the logo */
+.logo {
+  color: #092f87;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  margin-left: 75px;
+  font-family: "Caveat", cursive;
+}
+
+/* Styling the navigation links */
+.nav {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 100px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.link:hover {
+  color: #effffd;
+}
+
+/* Styling the main content section */
+.body {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Styling the contact form */
+.contact-form {
+  background-color: #092f87;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  margin-top: 2%;
+}
+
+.contact-form label {
+  color: #42c2ff;
+}
+
+.contact-form .heading {
+  font-size: 24px;
+  color: #42c2ff;
+  margin-bottom: 12px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Styling the textarea element */
+textarea {
+  resize: none;
+  height: 100px;
+  width: 380px;
+  background-color: #42c3ff25;
+  color: #effffd;
+  font-size: 15px;
+}
+
+/* Styling the input and textarea elements */
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  width: 380px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #42c3ff25;
+  color: #effffd;
+  font-size: 15px;
+}
+
+/* Styling the input and textarea elements when focused */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #42c2ff;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styling the submit button */
+.contact-form button[type="submit"] {
+  background-color: #42c2ff;
+  color: #092f87;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 23px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  margin: 20px 120px;
+  width: 150px;
+  height: 35px;
+}
+
+.contact-form button[type="submit"]:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Custom CSS for SweetAlert */
+.swal2-popup {
+  background-image: url("./px1594884-image-kwvxry3h.jpg");
+  border-radius: 25px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  border: rgba(33, 149, 243, 0.968) solid;
+}
+
+.swal2-icon.swal2-success {
+  color: blue;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: 4px solid rgba(255, 0, 0, 0.2);
+}
+
+.swal2-icon.swal2-success::before,
+.swal2-icon.swal2-success::after {
+  background-color: none;
+}
+
+.swal2-confirm {
+  background-color: #ff0000;
+}
+
+.swal2-icon.swal2-success {
+  color: #2196f3;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: 4px solid rgba(33, 149, 243, 0.968);
+}
+
+/* Styling the footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  background-color: #42c2ff;
+  text-align: center;
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  padding-top: 12px;
+}
